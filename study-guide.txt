@@ -1,0 +1,253 @@
+UNIT ONE STUDY GUIDE
+
+ALGORITHMS
+An algoritm is a problem/ resource dependent step-by-step procedure taken 
+to solve a well-definedproblem. The building blocks that allows computers 
+to function and make decisions. Think of a recipe for making toffee cookies,
+the algorithm is the steps of the recipe.
+
+POLYNOMIAL-TIME ALGORITHMS IN PYTHON
+Search: to search for an item in a data structure
+Sort: to sort items in a certain order
+Insert: to insert item in a data structure
+Update: to update an existing item in a data structure
+Delete: to delete an existing item from a data structure
+
+CHARACTERISTICS OF AN ALGORITHM
+Unamiguous: each step and input/output should be clear and lead to 
+one meaning
+Input: should have 0 or more well-defined inputs
+Output: should have 1 or more well-defined outputs and should match desired
+output
+Finiteness: must terminate after a finite number of steps
+Feasibility/ Practicality: should be feasible with the available resources
+Independent: step-by-step directions should be independed of any other code
+
+HEURISTIC ALGORITM
+Designed to solve a problem in a faster and more efficient way(optimization)
+It may not produce the best solution but it gives a near-optimal solution
+in a short time. Used to solved NP(nondeterministic polynomial time: questions
+with yes-or-no answer(decision problems) for which the yes answers can be
+verified in polynomial time(for a problem of size n, the time or # of steps
+needed to find the solution is a polynomial function of n)). Sacrifices
+optimality, completeness, accuracy, precision for speed.
+
+SEARCHING AND SORTING
+As a search runs, it adjusts its working parameters to optimize speed. 
+Discards current possibilities if they are worse than already found 
+solutions.
+
+BEST FIRST SEARCH(INFORMED SEARCH)
+decides which node is to be visited next by checking which node is the most promising
+one and then check it, evaluation function used to decide the traversal
+
+
+TRAVELING SALESMAN PROBLEM
+finding the shortest path that visits n specified locations, starting and 
+ending at the same place and visiting the other n-1 destinations exactly
+once - A NP-hard combinatorial problem
+
+-------------------------------------------------------------------------------------
+DOCSTRINGS + DOCTESTS
+Doc strings is the part of the function that explains how function should work,
+found on the first line of the body of the function, after function name + parameters
+
+Doctests is used to test a function found in that functions docstrings
+
+BRUTE FORCE ALGORITHM
+Most basic/ simplest algorithm. It uses a straightforward approach to a problem,
+iterating through every possibility until a valid solution is found
+
+
+PROBLEMS USING BRUTE FORCE
+Because Brute Force iterates through every possibility, it is slow and inefficient
+Because of its simplicity, it is not as constructive as other algorithm designs.
+
+
+VERSION CONTROL
+Used to track and store changes in files without losing the history of past changes
+As it keeps a record, it allows the user to revert back to previous versions
+A version control system is used to keep track of these changes (Ex.Git)
+Saving a file overwrites the file vs with VC, it stores a record of previous versions of
+a file so the user can track/review changes and restore to an older version if necessary
+
+
+GIT + GIT HUB
+Git is a open source version control system (VCS), installed and maintained on local system
+Github is an online repository hosting service that is cloud-based
+
+GIT COMMANDS TO KNOW
+git log			shows all commits in the current branch's history
+git init		creates a new local repository
+git status		shows modified files in working directory, staged for next commit
+git add			add a file and stage for next commit
+git commit -a -m	commits -a(all files in staging) with -m(message)
+git remote add		add a git URL as an alias
+git remote -v		be a little more verbose and show URL after name
+git push		transmit local branch commits to the remote repository branch
+
+.GITIGNORE
+A gitignore file specifies intentionally untracked files that Git should ignore during commit
+
+FILES GIT SHOULD GENERALLY IGNORE
+.DS_Store, pycache, files that contain sensitive information
+
+CHECKING IF A FILE IS IGNORED
+git check-ignore command reports on files ignored by Git.
+git status --ignored also shows ignored files
+
+REMOVING FILES FROM GIT HISTORY
+1. add file to .gitnore (EX. echo '.env' >> .gitnore)
+2. git filter-branch --index-filter "git rm --rf --cached --ignore-unmatch .env" HEAD
+3. git push --force
+4. git rm -r --cached .env
+
+IMPORTANCE OF COMMAND LINE
+Can use as lingua franca (common language)
+It is the same in all environments and on all machines
+Allows users to automate Git work
+Access to all commands
+
+COMMAND PROMPT
+An entry point for typing computer commands within computer system, user can perform tasks
+on computer without using GUI
+
+IMPORTANT SHELL COMMANDS
+ls		lists all files and directories in present working directory	
+pwd		
+cd		change directory		
+mv		move file to new location
+cp		copy file and directories to another location
+mkdir		make a new directory
+rm		remove file
+man		display the user manual of any command that can run on terminal
+cmd*--help	display complete usage of *specified command	
+ctrl d		logs out of the interface
+ctrl c		terminates signal and returns user to shell prompt
+cat 		print the contents of a file
+
+RELATIVE PATHS
+Refers to a location that is relative to a current directory. ./ == you are declaring
+that a path starts in same folder. /.. == path starts in folder above, etc
+
+ABSOLUTE PATHS
+Refers to the complete details needed to locate a file or folder, starting with the
+root element and ending with other subdirectories, also the full html link if web
+based. (THE FULL PATH)
+
+PARAMETERS
+Function parameters are the names listed in the function definition (placeholder variables)
+
+ARGUMENTS
+The real values that get passed to the function
+
+RETURN
+Statement used inside a function or method that sends the function's result back to the 
+caller
+
+IF NO RETURN STATEMENT
+A function without an explicit return statement returns None
+
+BREAK
+Used in a loop control statement. Terminates the loop and skips to the following code
+
+PRINT
+Displays output
+
+DEFAULT PARAMETER
+A predetermined value that the function argument will take on if no value is passed
+during function call 
+
+SCOPE
+The region a variable is created in
+
+Local: a variable created inside a functions belongs to the local scope of that
+function, and can only be used inside that function
+
+Global: a variable created in the main body of the python code, can be used by anyone
+
+FUNCTION STYLE CONSIDERATIONS
+Follow PEP 8 is the de facto code style guide for Python
+
+LIST METHODS AND FUNCTIONS
+sorted(): returns a sorted list of the specified iterable object. You can specify 
+ascending or descending order, builds a new sorted list
+.sort(): modifies the list in place
+.append(): appends an element to the end of a list
+.extend(): adds multiple individual elemets to the end of the list
+
+INDEXING OVER A LIST
+Python lists are 0-indexed (starts at 0 for first element). Single elements are accessed
+by using the name followed by a number in [], Can also access elements by [-1] (last item)
+[-2] second to last, etc
+
+SLICING A LIST
+Slicing a list gives another list instead of a single element. [start:end:step]
+
+LOOPING A LIST
+
+for x in thislist:
+	....
+
+for x in range(len(thislist)): #to loop over indexes
+	....
+
+while x < len(thislist):
+	...
+	i = i + 1
+
+MUTABILITY
+The ability or the tendency for change.
+
+PYTHON VS C MEMORY
+Python optimizes memory utilization by allocating the same object reference to a new variable
+if the object already exists with the same value.
+Points to a specific memory location and uses dynamic memory allocation.
+
+C is less memory efficient than python, it does not have garbage collection. In C, a programmer
+has to allocate/ deallocate memory manually.
+
+PYTHON VARIABLES VS CLASSIC VARIABLES
+Classic variables are usually declared when they are created, in order to be used in an 
+assignement statement
+
+Python does not need the declaration of a variable type
+
+GARBAGE COLLECTION
+Python's memory allocation and deallocation method is automatic. 
+
+Reference counting: counting the number of times an object is referenced by other objects
+in the system. When references to an object are removed, the reference count for an object
+is decremented. When the reference count becomes zero, the object is deallocated
+
+ID FUNCTION, COMPARATOR IS 
+id() function returns an identity(memory address) of an object
+is comparator: checks if two objects are the same
+
+SETS
+Used to store multiple items in a single variable
+A collection which is unordered, immutable, and unindexed
+Written with curly brackets
+
+SET METHODS
+.add() 		= gives a given element to a set if not already in the set
+len()	 	= returns the length of an object
+.remove()	= takes a single element as an argument and removes it from the list
+
+CREATING A SET
+Can be created with built in set() function 
+Can be creaed by placing elements inside {}
+Can have any number of items and they may be different types...
+
+CHECK IF SOMETHING IS A SET
+Using the type() function can determine if something is a set
+Using the in keyword can check if something is in a specified set
+
+TUPLES
+A finite ordered list of elements that is immutable and allow duplicate values
+
+Creating a tuple
+Created by placing all elements inside () and separated by commas or by using tuple()
+
+Indexing a tuple
+Similar to string indexing, tuple indices start at 0 and can be sliced, concatenated, etc
